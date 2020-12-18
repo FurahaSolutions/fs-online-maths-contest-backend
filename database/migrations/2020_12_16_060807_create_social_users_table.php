@@ -19,6 +19,7 @@ class CreateSocialUsersTable extends Migration
             $table->string('photo_url');
             $table->string('name');
             $table->foreignId('user_id');
+            $table->boolean('is_prof_pic');
             $table->foreign('user_id')->on('users')->references('id');
             $table->timestamps();
         });

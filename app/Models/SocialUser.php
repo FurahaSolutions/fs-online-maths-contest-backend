@@ -12,7 +12,7 @@ class SocialUser extends Model
     /**
      * @var array
      */
-    protected $fillable = ['provider', 'photo_url', 'name'];
+    protected $fillable = ['provider', 'photo_url', 'name', 'is_prof_pic'];
 
     public static function tokenIsValid($authToken, $id, $idToken) {
         return true; // TODO-me-important! Validate token

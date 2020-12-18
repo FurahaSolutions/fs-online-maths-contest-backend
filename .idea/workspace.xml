@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab2512b3-18c1-4a55-8895-a1418626af8b" name="Default Changelist" comment="" />
+    <list default="true" id="ab2512b3-18c1-4a55-8895-a1418626af8b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SocialUserLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SocialUserLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/SocialUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SocialUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/HasSocialUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/HasSocialUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/HasTokenAccess.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/HasTokenAccess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_16_060807_create_social_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_16_060807_create_social_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +27,9 @@
         <option value="composer.json" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
@@ -141,6 +154,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1kv7FUJXmWxXwF5jDMzDT00eSg7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -234,10 +248,14 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="205" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1608045785814" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1608115202225">
+    <state x="339" y="172" key="run.anything.popup" timestamp="1608130475763">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1608115202225" />
+    <state x="339" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1608130475763" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1608132161463">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1608132161463" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/online_maths_contest_backend@tests.xml" NAME="tests Coverage Results" MODIFIED="1608045451417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

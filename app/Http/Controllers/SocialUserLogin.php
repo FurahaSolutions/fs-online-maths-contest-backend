@@ -9,6 +9,7 @@ use Illuminate\Http\JsonResponse;
 
 class SocialUserLogin extends Controller
 {
+
     /**
      * @param SocialUserLoginRequest $request
      * @return JsonResponse
@@ -21,13 +22,21 @@ class SocialUserLogin extends Controller
         $id = $requestArray['id'];
         $idToken = $requestArray['idToken'];
 
-        $user = User::withEmail($email)->first();
-        if ($user !== null && $user->socialTokenIsValid($authToken, $id, $idToken)) {
-            return response()->json($user->getAccessToken());
+        $socialUser = User::withEmail($email)->first();
+        if ($socialUser !== null && $socialUser->socialTokenIsValid($authToken, $id, $idToken)) {
+            $token = $socialUser->getAccessToken();
+            return response()->json([
+                'token' => $token,
+                'user' => $socialUser->getDetails(),
+            ]);
         } else {
             if (SocialUser::tokenIsValid($authToken, $id, $idToken)) {
-                $user = User::createSocialUser($requestArray);
-                return response()->json($user->getAccessToken());
+                $socialUser = User::createSocialUser($requestArray);
+                $token = $socialUser->getAccessToken();
+                return response()->json([
+                    'token' => $token,
+                    'user' => $socialUser->getDetails()
+                ]);
             }
         }
 

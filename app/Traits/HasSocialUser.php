@@ -27,7 +27,8 @@ trait HasSocialUser
         $newUser->socialUser()->create([
             'provider' => $requestArray['provider'],
             'photo_url' => $requestArray['photoUrl'],
-            'name' => $requestArray['name']
+            'name' => $requestArray['name'],
+            'is_prof_pic' => true
         ]);
 
         return $newUser;
@@ -36,6 +37,17 @@ trait HasSocialUser
     public function socialTokenIsValid($authToken, $id, $idToken)
     {
         return true; // TODO-me-important! Validate token
+    }
+
+    public function getSocialPhotoLinkAttribute()
+    {
+        $socialUserDetails = $this->socialUser()->where('is_prof_pic', true)->first();
+        if ($socialUserDetails == null) {
+            return '';
+        }
+
+        return $socialUserDetails->photo_url;
+
     }
 
 }

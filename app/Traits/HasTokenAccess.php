@@ -10,8 +10,11 @@ use App\Models\User;
 trait HasTokenAccess
 {
     public function getAccessToken() {
-      $tokenResult = $this->createToken('Personal Access Token');
-      return $tokenResult;
+        $token = $this->createToken('Personal Access Token');
+        return [
+            'accessToken' => $token->accessToken,
+            'expiresAt' => $token->token['expires_at']
+        ];
     }
 
 }
