@@ -13,10 +13,12 @@ class ContestEditionController extends Controller
         $size = key_exists('size', $request) ? $request['size'] : 15;
 
         if ($featured) {
-            $contestEditions = ContestEdition::paginate($size);
-            $response = [];
+            $page = ContestEdition::paginate($size);
+            $contestEditions = $page->items();
+
+            $items = [];
             foreach ($contestEditions as $contestEdition) {
-                $response[] = [
+                $items[] = [
                     'id' => $contestEdition->id,
                     'contestId' => $contestEdition->contest_id,
                     'description' => $contestEdition->description,
@@ -28,7 +30,10 @@ class ContestEditionController extends Controller
                     'createdAt' => $contestEdition['created_at']
                 ];
             }
-            return response()->json($response); // ToDo-me define definition for featured contests
+            return response()->json([
+                'total' => $page->total(),
+                'data' => $items
+            ]); // ToDo-me define definition for featured contests
         }
         return response()->json(request()->all());
     }
