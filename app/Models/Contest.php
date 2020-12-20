@@ -11,4 +11,15 @@ use Illuminate\Database\Eloquent\Model;
 class Contest extends Model
 {
     use HasFactory;
+
+    public function editions() {
+        return $this->hasMany(ContestEdition::class);
+    }
+
+    public function getDetails() {
+        return [
+            'id' => $this->id,
+            'name' => $this->description
+        ];
+    }
 }

@@ -18,17 +18,7 @@ class ContestEditionController extends Controller
 
             $items = [];
             foreach ($contestEditions as $contestEdition) {
-                $items[] = [
-                    'id' => $contestEdition->id,
-                    'contestId' => $contestEdition->contest_id,
-                    'description' => $contestEdition->description,
-                    'edition' => $contestEdition->edition,
-                    'name' => $contestEdition->name,
-                    'status' => $contestEdition->status,
-                    'contestName' => $contestEdition->contest->name,
-                    'contestDescription' => $contestEdition->contest->description,
-                    'createdAt' => $contestEdition['created_at']
-                ];
+                $items[] = $contestEdition->getDetails();
             }
             return response()->json([
                 'total' => $page->total(),
