@@ -18,7 +18,16 @@ class ContestEdition extends Model
         return $this->belongsTo(Contest::class);
     }
 
+    public function contestEvents() {
+        return $this->hasMany(ContestEditionEvent::class);
+    }
+
     public function getDetails() {
+        $events = $this->contestEvents;
+        $eventsResponse = [];
+        foreach ($events as $event) {
+            $eventsResponse[] = $event->getDetails();
+        }
         return [
             'id' => $this->id,
             'contestId' => $this->contest_id,
@@ -29,7 +38,8 @@ class ContestEdition extends Model
             'contestName' => $this->contest->name,
             'contestDescription' => $this->contest->description,
             'createdAt' => $this['created_at'],
-            'eventDateTime' => $this['event_date_time']
+            'eventDateTime' => $this['event_date_time'],
+            'events' => $eventsResponse
         ];
     }
 }
