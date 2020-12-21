@@ -14,7 +14,7 @@ class ContestEditionSeeder extends Seeder
     public function run()
     {
         $seeds = 0;
-        while ($seeds < 50) {
+        while ($seeds < 100) {
             $seeds = \App\Models\ContestEdition::count();
             try {
                 \App\Models\ContestEdition::factory(5)->create();

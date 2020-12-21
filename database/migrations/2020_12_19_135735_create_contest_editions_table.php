@@ -19,6 +19,7 @@ class CreateContestEditionsTable extends Migration
             $table->longText('description');
             $table->enum('status', ['in-progress', 'upcoming', 'completed', 'cancelled'])->default('upcoming');
             $table->integer('edition');
+            $table->dateTime('event_date_time');
             $table->foreignId('contest_id')->nullable();
             $table->foreign('contest_id')->references('id')->on('contests');
             $table->unique(['contest_id', 'edition']);

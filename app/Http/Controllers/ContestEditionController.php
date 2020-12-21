@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class ContestEditionController extends Controller
 {
+    public function show(ContestEdition $contestEdition) {
+        return $contestEdition->getDetails();
+    }
     public function index() {
         $request = \request()->all();
         $featured = key_exists('featured', $request) && $request['featured'];

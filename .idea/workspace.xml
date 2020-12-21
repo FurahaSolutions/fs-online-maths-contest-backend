@@ -16,7 +16,10 @@
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContestEditionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContestEditionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Contest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Contest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/ContestEdition.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ContestEdition.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ContestEditionFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ContestEditionFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_19_135735_create_contest_editions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_19_135735_create_contest_editions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ContestEditionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ContestEditionSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
@@ -271,10 +274,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="339" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1608373617872" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1608451774419">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1608491976597">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1608451774419" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1608491976597" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/online_maths_contest_backend@tests.xml" NAME="tests Coverage Results" MODIFIED="1608045451417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

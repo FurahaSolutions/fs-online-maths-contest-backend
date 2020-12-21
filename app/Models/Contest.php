@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 class Contest extends Model
 {
     use HasFactory;
+    protected $fillable = ['name', 'description'];
 
     public function editions() {
         return $this->hasMany(ContestEdition::class);
@@ -19,7 +20,8 @@ class Contest extends Model
     public function getDetails() {
         return [
             'id' => $this->id,
-            'name' => $this->description
+            'name' => $this->name,
+            'description' => $this->description
         ];
     }
 }
