@@ -13,6 +13,6 @@ class ContestEditionEventSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\ContestEditionEvent::factory(300)->create();
+        \App\Models\ContestEditionEvent::factory(40)->create();
     }
 }

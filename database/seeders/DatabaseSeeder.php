@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\ContestEdition;
+use App\Models\ContestQuestion;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,5 +19,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ContestSeeder::class);
         $this->call(ContestEditionSeeder::class);
         $this->call(ContestEditionEventSeeder::class);
+        $this->call(ContestQuestionSeeder::class);
     }
 }

@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class ContestSeeder extends Seeder
+class ContestQuestionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +13,6 @@ class ContestSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Contest::factory(4)->create();
+        \App\Models\ContestQuestion::factory(300)->create();
     }
 }

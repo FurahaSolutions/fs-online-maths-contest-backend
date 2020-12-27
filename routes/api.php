@@ -9,6 +9,7 @@ Route::middleware(['auth:api'])->group(function () {
     Route::get('user','App\\Http\\Controllers\\AuthController@index');
     Route::resource('contests', 'App\\Http\\Controllers\\ContestController');
     Route::resource('contest-editions', 'App\\Http\\Controllers\\ContestEditionController');
+    Route::resource('contest-edition-events', 'App\\Http\\Controllers\\ContestEditionEventController');
 });
 
 //Route::middleware(['binding'])->group(function () {
