@@ -46,4 +46,19 @@ class ContestEditionEvent extends Model
     public function verifyCode($code) {
         return $this->event_code == $code;
     }
+
+    public function contestQuestions(){
+        return $this->belongsToMany(ContestQuestion::class, 'event_question_answer')->withPivot([
+            'contest_event_question_id', 'user_id'
+        ]);
+    }
+
+    public function saveQuestionAnswers(array $questionAnswers)
+    {
+        foreach ($questionAnswers as $questionAnswer) {
+            $this->contestQuestions()->save(
+                ContestQuestion::find($questionAnswer['questionId']),
+                ['contest_question_answer_id' => $questionAnswer['answerId'], 'user_id' => auth()->id()]);
+        }
+    }
 }
