@@ -13,6 +13,8 @@ Route::middleware(['auth:api'])->group(function () {
     Route::post('contest-edition-events/{contestEditionEvent}/question-answers',
         'App\\Http\\Controllers\\ContestEditionEventQuestionAnswerController@store'
     );
+
+    Route::get('contest-edition-events/{contestEditionEvent}/leaderboard', 'App\\Http\\Controllers\\ContestEventLeaderBoardController@index');
 });
 
 //Route::middleware(['binding'])->group(function () {

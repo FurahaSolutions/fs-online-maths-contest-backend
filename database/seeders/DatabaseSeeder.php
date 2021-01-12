@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ContestEditionEventSeeder::class);
         $this->call(ContestQuestionSeeder::class);
         $this->call(ContestQuestionAnswerSeeder::class);
+        $this->call(QuestionEventAttemptSeeder::class);
     }
 }

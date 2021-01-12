@@ -9,7 +9,6 @@ class ContestEditionEventQuestionAnswerController extends Controller
 {
     public function store(ContestEditionEvent $contestEditionEvent) {
         return $contestEditionEvent->saveQuestionAnswers(request()->all());
-        $contestEditionEvent->saveQuestionAnswers(request()->all());
         return [
             'message' => 'Responses successfully saved'
         ];

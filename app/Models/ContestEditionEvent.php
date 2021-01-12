@@ -21,12 +21,15 @@ class ContestEditionEvent extends Model
         return $this->hasMany(ContestQuestion::class);
     }
 
-    public function getDetails() {
+    public function getDetails($includeQuestions = null) {
 
         $questions = [];
-        foreach ($this->questions as $question) {
-            $questions[] = $question->getDetails();
+        if ($includeQuestions === true) {
+            foreach ($this->questions as $question) {
+                $questions[] = $question->getDetails();
+            }
         }
+
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -47,18 +50,23 @@ class ContestEditionEvent extends Model
         return $this->event_code == $code;
     }
 
-    public function contestQuestions(){
+    public function contestQuestionsAttempts(){
         return $this->belongsToMany(ContestQuestion::class, 'event_question_answer')->withPivot([
-            'contest_event_question_id', 'user_id'
+            'contest_question_answer_id', 'user_id', 'contest_edition_event_id', 'attempt'
         ]);
     }
 
     public function saveQuestionAnswers(array $questionAnswers)
     {
         foreach ($questionAnswers as $questionAnswer) {
-            $this->contestQuestions()->save(
+            $this->contestQuestionsAttempts()->save(
                 ContestQuestion::find($questionAnswer['questionId']),
                 ['contest_question_answer_id' => $questionAnswer['answerId'], 'user_id' => auth()->id()]);
         }
+    }
+
+    public function getAttempts()
+    {
+        return $this->contestQuestionsAttempts;
     }
 }
