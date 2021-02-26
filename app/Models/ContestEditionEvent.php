@@ -42,7 +42,8 @@ class ContestEditionEvent extends Model
             'contestId' => $this->contest->id,
             'contestName' => $this->contest->name,
             'contestDescription' => $this->contest->description,
-            'questions' => $questions
+            'questions' => $questions,
+            'totalPoints' => $this->questions->pluck('points')->sum()
         ];
     }
 
